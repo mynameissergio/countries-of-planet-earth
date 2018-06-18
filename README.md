@@ -4,11 +4,18 @@ Welcome to Sergio Santanas coding exercise, which employs technolgies such as La
 UI to search for countries that find themselves on earth.
 
 It is first necessary to run `composer install` from the project directory to install Laravel dependecies.
-Afterwards to try it out, navigate to the `public` directory in this project:
+
+We also need a new `.env` file, and `APP_KEY` generated.
+
+`cp .env.example .env`
+
+`php artisan key:generate`
+
+Finally, to try it out, navigate to the `public` directory in this project:
 
 `cd public`
 
-Simply start up the built-in php server:
+And simply start up the built-in php server:
 
 `php -S localhost:8000`
 
