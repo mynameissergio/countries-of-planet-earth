@@ -35993,27 +35993,21 @@ var Countries = function (_Component) {
     }, {
         key: 'handleSubmit',
         value: function handleSubmit(event) {
+            event.preventDefault();
+            if (this.state.query && this.state.query.length > 1) {
+                this.getCountries();
+            }
+        }
+    }, {
+        key: 'handleInputChange',
+        value: function handleInputChange(event) {
             var _this3 = this;
 
-            event.preventDefault();
             this.setState({
                 query: event.target.value
             }, function () {
                 if (_this3.state.query && _this3.state.query.length > 1) {
                     _this3.getCountries();
-                }
-            });
-        }
-    }, {
-        key: 'handleInputChange',
-        value: function handleInputChange(event) {
-            var _this4 = this;
-
-            this.setState({
-                query: event.target.value
-            }, function () {
-                if (_this4.state.query && _this4.state.query.length > 1) {
-                    _this4.getCountries();
                 }
             });
         }
@@ -36094,12 +36088,12 @@ var Country = function (_Component3) {
     function Country(props) {
         _classCallCheck(this, Country);
 
-        var _this6 = _possibleConstructorReturn(this, (Country.__proto__ || Object.getPrototypeOf(Country)).call(this, props));
+        var _this5 = _possibleConstructorReturn(this, (Country.__proto__ || Object.getPrototypeOf(Country)).call(this, props));
 
-        _this6.flagStyle = {
-            backgroundImage: 'url(' + _this6.props.country.flag + ')'
+        _this5.flagStyle = {
+            backgroundImage: 'url(' + _this5.props.country.flag + ')'
         };
-        return _this6;
+        return _this5;
     }
 
     _createClass(Country, [{

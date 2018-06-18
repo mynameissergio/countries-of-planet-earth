@@ -48,13 +48,9 @@ export default class Countries extends Component
 
     handleSubmit(event) {
         event.preventDefault();
-        this.setState({
-            query: event.target.value
-        }, () => {
-            if (this.state.query && this.state.query.length > 1) {
-                this.getCountries()
-            }
-        });
+        if (this.state.query && this.state.query.length > 1) {
+            this.getCountries();
+        }
     }
 
     handleInputChange(event) {

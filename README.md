@@ -9,3 +9,7 @@ After that, simply spin up the built in php server:
 `php -S localhost:8000`
 
 Navigate to localhost:8000 in your browser and type away! The page will automatically populate with a list of countries along with the desired information.
+
+Files of interest are
+`resources/assets/js/components/countries.js` (React components)
+and `/app/Http/Controllers/CountryController.php` (PHP controllers)
